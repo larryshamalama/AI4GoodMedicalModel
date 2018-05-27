@@ -1,38 +1,105 @@
-<!DOCTYPE html>
+{% extends "bootstrap/base.html" %}
+
+{% block styles %}
+{{super()}}
+<link rel="stylesheet"
+      href="{{url_for('.static', filename='album.css')}}">
+{% endblock %}
+
+{% block content %}
+
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Medical Model - AI 4 Good - Main Page </title>
-  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/app.css') }}">
-</head>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
 
-<body>
-<!-- this is the piece of code that performs the Rest API calls 
-                                        to the flask backend-->
-<header class="navbar">
-    <a href='doctor.html'> Go to doctor page </a>
-<!---->
-</header>
+    <title>Hackathon project</title>
 
-<header class="navbar">
-    <a href='patient.html'> Go to patient page </a>
-<!---->
-</header>
+    <!-- Bootstrap core CSS -->
+    <link href="../../../../dist/css/bootstrap.min.css" rel="stylesheet">
 
-<header class="navbar">
-    <a href='researcher.html'> Go to researcher page </a>
-<!---->
-</header>
+    <!-- Custom styles for this template -->
+    <link href="album.css" rel="stylesheet">
+  </head>
 
-<header class="navbar">
-    <a href='education.html'> Go to education page </a>
-<!---->
-</header>
+  <body style="background-color:powderblue;">
 
-<header class="navbar">
-    <a href='help_us.html'> Go to support page </a>
-<!---->
-</header>
+    <header>
+      <div class="collapse bg-dark" id="navbarHeader">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-8 col-md-7 py-4">
+              <h4 class="text-white">About</h4>
+              <p class="text-muted">Web app created to serve as a powerful and versatile tool for medical imaging.</p>
+            </div>
+            <div class="col-sm-4 offset-md-1 py-4">
+              <h4 class="text-white">Links</h4>
+              <ul class="list-unstyled">
+                <li><a href="/" class="text-white">Main Page</a></li>
+                <li><a href="recognition.html" class="text-white">Image Recognition for Better Health</a></li>
+                <li><a href="education.html" class="text-white">Train Yourself</a></li>
+                <li><a href="help_us.html" class="text-white">Help Us Improve!</a></li>
 
-</body>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+        <div class="container d-flex justify-content-between">
+          <button class="btn-group-toggle" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation" style="background-color: #008CBA; border: none;
+    color: white;
+    font:16px;
+    border-radius: 8px;
+    padding: 15px 18px;">This is Winnipeg</button>
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main role="main">
+
+      <section class="jumbotron text-center" style="background-color:skyblue;">
+        <div class="container">
+          <h1 class="jumbotron-heading" style="color: black;">This is not Kombucha</h1>
+          <p class="lead text-muted">Web app created by 4 students from McGill,<br>with the intention to provide a comprehensive tool to assist the analysis of health related images. </p>
+        </div>
+      </section>
+
+<a href="recognition.html" type="button" class="btn btn-primary btn-lg btn-block">Health-Related Image Recognition <br><font size="-1">Ranging from brain imaging scans to pictures of your own skin,<br> this tool lets you run diverse tasks for medical/research/education purposes.</font></a>
+
+<a href="education.html" type="button" class="btn btn-primary btn-lg btn-block">Train Yourself<br><font size="-1">Learn how to decipher images on health conditions.</font></a>
+
+<a href="help_us.html" type="button" class="btn btn-primary btn-lg btn-block">Help Us Improve!<br><font size="-1">How many programmers does it take to screw in a light bulb? <br> None. It's a hardware problem.</font></a>
+
+
+
+
+    </main>
+
+    <footer class="text-muted">
+      <div class="container">
+        <p class="float-right">
+          <a href="#">Back to top</a>
+        </p>
+        <p>by Hannah Jin, Yue Dai, HeQian Wang and Larry Dong</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../../../dist/js/bootstrap.min.js"></script>
+    <script src="../../../../assets/js/vendor/holder.min.js"></script>
+  </body>
 </html>
+
+
+{% endblock content %}
