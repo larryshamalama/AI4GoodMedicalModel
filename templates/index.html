@@ -2,23 +2,36 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Sightengine demo - Python and Flask</title>
+  <title>Medical Model - AI 4 Good - Main Page </title>
   <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/app.css') }}">
 </head>
 
 <body>
+<!-- this is the piece of code that performs the Rest API calls 
+                                        to the flask backend-->
 <header class="navbar">
-  <form action="/upload" method="post" enctype="multipart/form-data" >
-      <span class="btn btn-default btn-file">
-        Browse <input type="file" name="image">
-      </span>
+    <a href='doctor.html'> Go to doctor page </a>
+<!---->
+</header>
 
-    <input type="submit" value="Upload your image" class="btn btn-primary">
-  </form>
+<header class="navbar">
+    <a href='patient.html'> Go to patient page </a>
+<!---->
+</header>
 
-  <span class="navbar-text"> Image moderation with
-      <a href="https://sightengine.com/">Sightengine</a>
-  </span>
+<header class="navbar">
+    <a href='researcher.html'> Go to researcher page </a>
+<!---->
+</header>
+
+<header class="navbar">
+    <a href='education.html'> Go to education page </a>
+<!---->
+</header>
+
+<header class="navbar">
+    <a href='help_us.html'> Go to support page </a>
+<!---->
 </header>
 
 </body>
